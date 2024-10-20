@@ -1,0 +1,7 @@
+# Example: Store the current user's SID in a .env file
+$SID = (New-Object System.Security.Principal.NTAccount($env:USERNAME)).Translate([System.Security.Principal.SecurityIdentifier]).Value
+$envContent = "AIRFLOW_SID=$SID"
+Set-Content -Path .env -Value $envContent
+
+docker compose up airflow-init
+docker compose up -d
