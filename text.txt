@@ -5,3 +5,4 @@ Set-Content -Path .env -Value $envContent
 
 docker compose up airflow-init
 docker compose up -d
+https://colab.research.google.com/drive/18wtFmUL98hgcOjTNj2xaLB1BQBDZAWax?usp=sharing
